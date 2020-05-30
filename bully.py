@@ -93,7 +93,7 @@ class Bully:
         print('updating leader details')
         self.has_leader = True
         self.master = data
-        self.work_thread.init_worker()
+        self.work_thread.init_worker(data, self.service)
 
     def set_password_range(self, pw_range):
         self.work_thread.set_worker_password_range(pw_range)
@@ -106,6 +106,13 @@ class Bully:
                 worker_list.append(service_location)
 
         return worker_list
+
+    def compare_pw(self, data):
+        return self.work_thread.master.compare_passwords(data)
+
+    def stop_password_cracking(self):
+        print('stop cracking')
+        self.work_thread.worker.stop_password_cracking()
 
     def _send_coordinator_message(self):
         print('**_____________________**')
@@ -211,5 +218,3 @@ class Bully:
                 can_become_coordinator = True
                 break
         return can_become_coordinator
-
-

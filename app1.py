@@ -5,7 +5,6 @@ import json
 import logging
 import sys
 
-
 PORT = int(sys.argv[1])
 assert PORT
 SERVICE_ID = f'service_{PORT}'
@@ -62,8 +61,15 @@ def worker_instructions():
 @app.route('/check-password', methods=['POST'])
 def check_password():
     data = json.loads(request.data)
+    is_cracked = bully.compare_pw(data)
+    return jsonify({'is_cracked': is_cracked})
 
-    return jsonify({'data': 'starting work'})
+
+@app.route('/stop-password-cracking', methods=['POST'])
+def stop_password_cracking():
+    data = json.loads(request.data)
+    bully.stop_password_cracking()
+    return jsonify({'is_cracked': True})
 
 
 if __name__ == '__main__':

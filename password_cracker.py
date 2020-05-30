@@ -2,29 +2,30 @@ from string import ascii_lowercase, digits, ascii_uppercase
 
 
 class PasswordCracker:
-    def __init__(self):
-        self.all_letters = ascii_lowercase + digits + ascii_uppercase
+    def __init__(self, compare_fn):
         self.password_range = []
         self.start_password = None
         self.letter_range = None
-        self.given_password = '09eaaA'
+        self.compare_fn = compare_fn
         print('pw cracker init')
+        self.is_password_cracked = False
+        self.cracked_by_a_node = False
+
+        self.all_letters = None
 
     def crack_password(self):
         print('cracking password...')
         crack_pos = 0
         cha_at = 0
-        is_password_cracked = True
+
         if not self.start_password:
             raise Exception('Start password is required!')
 
-        while is_password_cracked:
-            while is_password_cracked and cha_at < len(self.all_letters):
+        while not self.is_password_cracked:
+            while not self.is_password_cracked and cha_at < len(self.all_letters):
                 self.start_password[crack_pos] = self.all_letters[cha_at]
                 cha_at += 1
                 self.compare(self.start_password)
-                is_password_cracked = ''.join(self.start_password) != self.given_password
-
             crack_pos += 1
             cha_at = 0
 
@@ -37,15 +38,25 @@ class PasswordCracker:
             self.start_password[crack_pos] = self.all_letters[self.get_next_letter_index(crack_pos) + 1]
 
             crack_pos = 0
-            print('---')
 
     def get_next_letter_index(self, crack_pos):
         return self.all_letters.index(self.start_password[crack_pos])
 
     def compare(self, password):
-        print(password)
+        if self.cracked_by_a_node:
+            self.is_password_cracked = True
+        else:
+            self.is_password_cracked = self.compare_fn(''.join(password))
 
     def update_pw_range(self, pw_range):
         self.password_range = pw_range
         self.start_password = list(self.password_range[0])
         self.letter_range = len(self.start_password)
+
+        first_range_index = ascii_lowercase.index(self.password_range[0][0])
+        second_range_index = ascii_lowercase.index(self.password_range[1][0])
+
+        lowercase_range = ascii_lowercase[first_range_index:second_range_index + 1]
+        uppercase_range = ascii_uppercase[first_range_index:second_range_index + 1]
+
+        self.all_letters = lowercase_range + digits + uppercase_range

@@ -6,11 +6,11 @@ import threading
 class Master:
 
     def __init__(self, get_workers_fn):
-        # self.master_node = master
         self.worker_dict = {}
         self.get_worker_fn = get_workers_fn
         self.worker_nodes = None
         self.schedule_work()
+        self.password_index = 0
 
     def schedule_work(self):
         print('scheduling work')
@@ -46,4 +46,30 @@ class Master:
             workers = {}
         for worker in workers.values():
             url = f"{worker['Address']}:{worker['Port']}/worker-instructions"
+            requests.post(url, json=worker['cha_range'])
+
+
+    def read_passwords(self):
+        passwords = ['baaaaa', 'agH6Hz', 'XuQjKe', 'ZnZwcy']
+        return passwords[self.password_index]
+
+    def compare_passwords(self, data):
+        given_password = self.read_passwords()
+        print('comparing', given_password, data['password'])
+        if data['password'] == given_password:
+
+            print('*********************************')
+            print('Password cracked by: ', data['node'])
+            print('*********************************')
+            thread = threading.Thread(target=self.stop_cracking, args=[self.worker_dict])
+            thread.start()
+            self.password_index += 1
+            self.schedule_work()
+            return True
+
+        return False
+
+    def stop_cracking(self, workers):
+        for worker in workers.values():
+            url = f"{worker['Address']}:{worker['Port']}/stop-password-cracking"
             requests.post(url, json=worker['cha_range'])
