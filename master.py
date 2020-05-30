@@ -1,6 +1,7 @@
 import math
 from string import ascii_lowercase
-
+import requests
+import threading
 
 class Master:
 
@@ -9,9 +10,10 @@ class Master:
         self.worker_dict = {}
         self.get_worker_fn = get_workers_fn
         self.worker_nodes = None
+        self.schedule_work()
 
     def schedule_work(self):
-
+        print('scheduling work')
         self.worker_dict = {}
         self.worker_nodes = self.get_worker_fn()
 
@@ -34,8 +36,14 @@ class Master:
             self.worker_dict[_worker_node['ID']]['cha_range'] = cha_range
             _current_cha_position += letter_range
 
+        print('work schedule ready.')
+        work_timer = threading.Timer(5, self.assign_and_start_work, args=[self.worker_dict])
+        work_timer.start()
+
     def assign_and_start_work(self, workers=None):
+        print('assigning password range')
         if workers is None:
             workers = {}
         for worker in workers.values():
-            url = f"{worker['Address']}:{worker['Port']}/"
+            url = f"{worker['Address']}:{worker['Port']}/worker-instructions"
+            requests.post(url, json=worker['cha_range'])

@@ -3,13 +3,16 @@ from service_discovery import ServiceDiscovery
 from bully import Bully
 import json
 import logging
+import sys
 
-logging.basicConfig(filename='demo.log', level=logging.INFO)
 
-PORT = 5003
+PORT = int(sys.argv[1])
+assert PORT
 SERVICE_ID = f'service_{PORT}'
 NAME = f's_{PORT}'
 HOST = 'http://localhost'
+
+logging.basicConfig(filename=f"{SERVICE_ID}.log", level=logging.INFO)
 
 app = Flask(__name__)
 service_discovery = ServiceDiscovery()
@@ -24,7 +27,6 @@ print('Node Id is ', service_details['service_id'])
 @app.route('/election', methods=['POST'])
 def hello_world():
     data = json.loads(request.data)
-    print('election message received...', data['service_id'])
     bully.init_election(False, True)
     return jsonify({'data': 'ok'})
 
@@ -46,8 +48,22 @@ def ongoing_election_info():
 @app.route('/coordinator', methods=['POST'])
 def coordinator_msg():
     data = json.loads(request.data)
-    bully.update_leader()
+    bully.update_leader(data)
     return jsonify({'data': 'updated'})
+
+
+@app.route('/worker-instructions', methods=['POST'])
+def worker_instructions():
+    data = json.loads(request.data)
+    bully.set_password_range(data)
+    return jsonify({'data': 'starting work'})
+
+
+@app.route('/check-password', methods=['POST'])
+def check_password():
+    data = json.loads(request.data)
+
+    return jsonify({'data': 'starting work'})
 
 
 if __name__ == '__main__':

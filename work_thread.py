@@ -11,8 +11,12 @@ class WorkThread:
     def init_worker(self):
         self.worker = worker.Worker()
 
+
     def set_worker_password_range(self, pw_range):
-        self.worker.set_password_range(pw_range)
+        if self.worker:
+            self.worker.set_password_range(pw_range)
+        else:
+            raise Exception()
 
     def init_master(self, get_workers_fn):
         self.master = master.Master(get_workers_fn)

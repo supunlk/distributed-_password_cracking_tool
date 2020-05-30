@@ -1593,3 +1593,563 @@ Traceback (most recent call last):
 TypeError: update_leader() missing 1 required positional argument: 'data'
 INFO:werkzeug:127.0.0.1 - - [29/May/2020 18:56:05] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [29/May/2020 18:56:05] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:23] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:25] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:26] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:41] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:41] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+ERROR:app2:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app2.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:51] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:20:51] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:34] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:35] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:37] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:23:37] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:04] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:04] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:04] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:06] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:06] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:06] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:06] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:08] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:08] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:09] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:10] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:10] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:12] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:14] "[37mPOST /election HTTP/1.1[0m" 200 -
+ERROR:app2:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app2.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:16] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 46, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:16] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:16] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:24:18] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:21] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:23] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:24] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:24] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:26] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:26] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:41] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:41] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:41] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 46, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:52] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:52] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:55] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:55] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:25:59] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:03] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:05] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:47] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:48] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:49] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:49] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:51] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:26:51] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:15] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:15] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:15] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:17] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:17] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:19] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:19] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:21] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:21] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:23] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:25] "[37mPOST /election HTTP/1.1[0m" 200 -
+ERROR:app2:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app2.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:31] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 46, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:31] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:37] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:27:39] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:47] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:48] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:49] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:49] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:51] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:28:51] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:29] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:29] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:31] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:31] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:31] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:33] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:33] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:33] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:33] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:35] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:37] "[37mPOST /election HTTP/1.1[0m" 200 -
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 46, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:40] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader()
+TypeError: update_leader() missing 1 required positional argument: 'data'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:29:40] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:14] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:16] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:18] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:18] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:19] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:19] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:48] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:48] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:48] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:33:48] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:00] "[37mPOST /coordinator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:00] "[37mPOST /coordinator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:04] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:04] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:06] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:34:08] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:17] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:18] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:20] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:20] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:21] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:21] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:44] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:44] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:44] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:46] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:46] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:48] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:52] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:52] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:54] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:56] "[37mPOST /coordinator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:37:56] "[37mPOST /coordinator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:06] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:07] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:08] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:08] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:09] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:09] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:42] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:42] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:42] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:44] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:44] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:45] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:48] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:48] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:48] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:49] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:49] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:50] "[37mPOST /election HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:52] "[37mPOST /election HTTP/1.1[0m" 200 -
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 45, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 96, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 12, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:56] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 96, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 12, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:41:56] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:33] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:34] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:34] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:36] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:56] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:46:56] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+ERROR:app2:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app2.py", line 49, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 95, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 13, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:47:06] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 95, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 13, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:47:06] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5003/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:31] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:32] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:32] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:33] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:33] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:34] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:53:34] "[37mPOST /node-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:01] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:01] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+ERROR:app1:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 46, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 95, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 13, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:11] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app3:Exception on /coordinator [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 49, in coordinator_msg
+    bully.update_leader(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 95, in update_leader
+    self.work_thread.init_worker()
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 13, in init_worker
+    self.worker = worker.Worker()
+  File "D:\Personal\python\dc-password-crack\worker.py", line 6, in __init__
+    self._password_cracker = PasswordCracker()
+  File "D:\Personal\python\dc-password-crack\password_cracker.py", line 10, in __init__
+    self.start_password = list(self.password_range[0])
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:11] "[35m[1mPOST /coordinator HTTP/1.1[0m" 500 -
+ERROR:app1:Exception on /worker-instructions [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app1.py", line 53, in worker_instructions
+    bully.set_password_range(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 98, in set_password_range
+    self.work_thread.set_worker_password_range(pw_range)
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 17, in set_worker_password_range
+    self.worker.set_password_range(pw_range)
+AttributeError: 'NoneType' object has no attribute 'set_password_range'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:15] "[35m[1mPOST /worker-instructions HTTP/1.1[0m" 500 -
+ERROR:app3:Exception on /worker-instructions [POST]
+Traceback (most recent call last):
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\supun\anaconda3\envs\dc-password-crack\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app3.py", line 56, in worker_instructions
+    bully.set_password_range(data)
+  File "D:\Personal\python\dc-password-crack\bully.py", line 98, in set_password_range
+    self.work_thread.set_worker_password_range(pw_range)
+  File "D:\Personal\python\dc-password-crack\work_thread.py", line 17, in set_worker_password_range
+    self.worker.set_password_range(pw_range)
+AttributeError: 'NoneType' object has no attribute 'set_password_range'
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:17] "[35m[1mPOST /worker-instructions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:21] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:21] "[37mPOST /ongoing-election-info HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2020 07:54:21] "[37mPOST /election HTTP/1.1[0m" 200 -

@@ -3,9 +3,11 @@ from service_discovery import ServiceDiscovery
 from bully import Bully
 import json
 import logging
-import work_thread
+import sys
 
-PORT = 5000
+
+PORT = int(sys.argv[1])
+assert PORT
 SERVICE_ID = f'service_{PORT}'
 NAME = f's_{PORT}'
 HOST = 'http://localhost'
@@ -25,7 +27,6 @@ print('Node Id is ', service_details['service_id'])
 @app.route('/election', methods=['POST'])
 def hello_world():
     data = json.loads(request.data)
-    print('election message received...', data['service_id'])
     bully.init_election(False, True)
     return jsonify({'data': 'ok'})
 

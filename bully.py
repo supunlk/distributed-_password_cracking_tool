@@ -74,7 +74,7 @@ class Bully:
                 election_thread = threading.Timer(self._timeout, self.become_leader)
                 election_thread.start()
             elif election_inited_by_node and not self._election_message_sent_to_higher_nodes and not self._coordinator_message_sent:
-                print('election init by a node')
+                print('election message received...')
                 print('*-----------------------*')
                 self._lock = True
                 self.become_leader()
@@ -90,12 +90,22 @@ class Bully:
             self.services.append(service)
 
     def update_leader(self, data):
+        print('updating leader details')
         self.has_leader = True
         self.master = data
         self.work_thread.init_worker()
 
-    def set_password_range(self, range):
-        self.work_thread.set_worker_password_range(range)
+    def set_password_range(self, pw_range):
+        self.work_thread.set_worker_password_range(pw_range)
+
+    def get_worker_list(self):
+        service_locations = self.get_service_list_fn()
+        worker_list = []
+        for service_location in service_locations:
+            if self.is_leader and service_location['Port'] != self.service['port']:
+                worker_list.append(service_location)
+
+        return worker_list
 
     def _send_coordinator_message(self):
         print('**_____________________**')
@@ -106,7 +116,6 @@ class Bully:
             print(f"sending coordinator message to: {url}")
 
             response = requests.post(url, json=self.service)
-            print(response.status_code)
 
         urls = [f"{s['address']}:{s['port']}/coordinator" for s in self.services]
         threads = [threading.Thread(target=post_fn, args=(url,)) for url in urls]
@@ -203,11 +212,4 @@ class Bully:
                 break
         return can_become_coordinator
 
-    def get_worker_list(self):
-        service_locations = self.get_service_list_fn()
-        worker_list = []
-        for service_location in service_locations:
-            if self.is_leader and service_location['Port'] != self.service['port']:
-                worker_list.append(service_location)
 
-        return worker_list
