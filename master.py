@@ -59,7 +59,7 @@ class Master:
         if data['password'] == given_password:
 
             print('*********************************')
-            print('Password cracked by: ', data['node'])
+            print('Given password: ', given_password, 'Password cracked by: ', data['node'], )
             print('*********************************')
             thread = threading.Thread(target=self.stop_cracking, args=[self.worker_dict])
             thread.start()
