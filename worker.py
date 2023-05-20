@@ -1,7 +1,5 @@
-from password_cracker import PasswordCracker
-from multiprocessing import Process
 import threading
-import time
+from password_cracker import PasswordCracker
 
 
 class Worker:
@@ -30,4 +28,3 @@ class Worker:
 
     def stop_password_cracking(self):
         self._password_cracker.cracked_by_a_node = True
-

@@ -3,6 +3,7 @@ from string import ascii_lowercase
 import requests
 import threading
 
+
 class Master:
 
     def __init__(self, get_workers_fn):
@@ -48,19 +49,29 @@ class Master:
             url = f"{worker['Address']}:{worker['Port']}/worker-instructions"
             requests.post(url, json=worker['cha_range'])
 
-
     def read_passwords(self):
-        passwords = ['baaaaa', 'agH6Hz', 'XuQjKe', 'ZnZwcy']
+        passwords = []
+        with open('passwords.txt', 'r') as f:
+            for line in f:
+                password = line.strip()
+                if password:
+                    passwords.append(password)
         return passwords[self.password_index]
 
     def compare_passwords(self, data):
         given_password = self.read_passwords()
         print('comparing', given_password, data['password'])
         if data['password'] == given_password:
-
+            print('*********************************')
+            print('*********************************')
+            print('*********************************')
             print('*********************************')
             print('Given password: ', given_password, 'Password cracked by: ', data['node'], )
             print('*********************************')
+            print('*********************************')
+            print('*********************************')
+            print('*********************************')
+
             thread = threading.Thread(target=self.stop_cracking, args=[self.worker_dict])
             thread.start()
             self.password_index += 1
