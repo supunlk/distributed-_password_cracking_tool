@@ -152,7 +152,6 @@ class Bully:
         threads = [threading.Thread(target=post_fn, args=(service,)) for service in service_locations]
         for thread in threads:
             thread.start()
-            # thread.join()
 
         self._check_leader()
         self._check_election_status()

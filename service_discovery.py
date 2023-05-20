@@ -2,7 +2,7 @@ import requests
 
 
 class ServiceDiscovery:
-    def __init__(self, endpoint='http://localhost:4000'):
+    def __init__(self, endpoint='http://127.0.0.1:8500/v1/agent'):
         self.endpoint = endpoint
         self.url_register = '{}/{}'.format(self.endpoint, 'service/register')
         self.url_deregister = '{}/{}'.format(self.endpoint, 'service/deregister')
@@ -30,4 +30,6 @@ class ServiceDiscovery:
     def list(self):
         """List all services that have been registered"""
         r = requests.get(self.url_services)
-        return r.json()['data']
+        services = r.json()
+        services_array = list(services.values())
+        return services_array

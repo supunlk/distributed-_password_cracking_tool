@@ -53,10 +53,4 @@ class PasswordCracker:
         self.start_password = list(self.password_range[0])
         self.letter_range = len(self.start_password)
 
-        first_range_index = ascii_lowercase.index(self.password_range[0][0])
-        second_range_index = ascii_lowercase.index(self.password_range[1][0])
-
-        lowercase_range = ascii_lowercase[first_range_index:second_range_index + 1]
-        uppercase_range = ascii_uppercase[first_range_index:second_range_index + 1]
-
-        self.all_letters = lowercase_range + digits + uppercase_range
+        self.all_letters = ascii_lowercase + digits + ascii_uppercase
